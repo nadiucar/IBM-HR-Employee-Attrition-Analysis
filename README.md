@@ -31,6 +31,13 @@ To prevent the model from overfitting, JobLevel and repeated financial ratios (*
 **Robust Scaling**: To avoid losing senior employees (outliers) in the data, RobustScaler, which is resistant to outliers, was used instead of StandardScaler.
 
 **Imbalanced Data Management**: To maintain the “split” ratio in the training and test sets, stratification was performed using the **stratify=y** parameter.
+### Correlation Analysis
+Heatmap used to identify relationships and multicollinearity among numerical variables in the dataset:
+![Heatmap](Heatmap.png)
+
+### Outlier Analysis
+Analysis of outliers in variables such as salary and seniority:
+![Boxplot](Boxplot.png)
 
 ## Modeling and Performance Comparison
 Three different algorithms were tested using class weighting methods:
@@ -45,10 +52,18 @@ The imbalance between classes (16% split, 84% remaining) has been strategically 
 | Random Forest (Balanced) | 0.40 | 0.09 | 0.14 |
 | XGBoost (Weighted) | 0.32 | 0.47 | 0.38 |
 
+### Model Performance (Confusion Matrix)
+The success of the Logistic Regression model in identifying “At-risk” employees:
+![Confusion Matrix](Matris.png)
+
 **Why Logistic Regression?:** Although it is a linear model, it responded best to weighting, correctly captured 7 out of every 10 people who would leave, and provided “explainable” results thanks to its coefficients.
 
 ## Key Findings (Top 10 Factors)
 According to the model analysis, the five key factors that most influence employees' decision to leave their jobs and their explanations are as follows:
+
+### Feature Importance
+Weight distribution of the strongest factors triggering resignation:
+![Feature Importance](Bar.png)
 
 | Impact Factor (Feature) | Explanation |
 | :--- | :--- |

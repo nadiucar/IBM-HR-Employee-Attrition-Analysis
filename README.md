@@ -33,11 +33,11 @@ To prevent the model from overfitting, JobLevel and repeated financial ratios (*
 **Imbalanced Data Management**: To maintain the “split” ratio in the training and test sets, stratification was performed using the **stratify=y** parameter.
 ### Correlation Analysis
 Heatmap used to identify relationships and multicollinearity among numerical variables in the dataset:
-![Heatmap](Heatmap.png)
+![Heatmap](images/Heatmap.png)
 
 ### Outlier Analysis
 Analysis of outliers in variables such as salary and seniority:
-![Boxplot](Boxplot.png)
+![Boxplot](images/Boxplot.png)
 
 ## Modeling and Performance Comparison
 Three different algorithms were tested using class weighting methods:
@@ -54,7 +54,7 @@ The imbalance between classes (16% split, 84% remaining) has been strategically 
 
 ### Model Performance (Confusion Matrix)
 The success of the Logistic Regression model in identifying “At-risk” employees:
-![Confusion Matrix](Matris.png)
+![Confusion Matrix](images/Matris.png)
 
 **Why Logistic Regression?:** Although it is a linear model, it responded best to weighting, correctly captured 7 out of every 10 people who would leave, and provided “explainable” results thanks to its coefficients.
 
@@ -63,7 +63,7 @@ According to the model analysis, the five key factors that most influence employ
 
 ### Feature Importance
 Weight distribution of the strongest factors triggering resignation:
-![Feature Importance](Bar.png)
+![Feature Importance](images/Bar.png)
 
 | Impact Factor (Feature) | Explanation |
 | :--- | :--- |
